@@ -7,10 +7,10 @@ import {
 } from 'react-native';
 import IdePNG from '../assets/idea.png';
 export default function CategoryListItem(props){
-    const {title} = props;
+    const {category} = props;
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.title}>{category.name}</Text>
             <Image style={styles.categoryImage} source={IdePNG}/>
         </View>
     )
@@ -27,17 +27,18 @@ const styles = StyleSheet.create({
         lineHeight: 25,
         marginBottom: 10,
     },
-    container:{
-        alignItems: "center",
-        padding:16,
-        borderRadius:4,
-        backgroundColor: 'rgba(0,0,0,0.15)',
-        shadowRadius: 5,
+    container: {
+        alignItems: 'center',
+        padding: 16,
+        borderRadius: 6,
+        backgroundColor: '#FFF',
         shadowColor: '#000',
-        shadowOffset: { width: 5, height: 0 },
-        shadowOpacity: 0.8,
-        marginBottom:10,
-        
-        
-    }
+        shadowOpacity: 0.3,
+        shadowRadius: 10,
+        shadowOffset: { width: 0, height: 0 },
+        marginBottom: 16,
+        elevation:5,
+        marginLeft:5,
+        marginRight: 5,
+      }    
 })
